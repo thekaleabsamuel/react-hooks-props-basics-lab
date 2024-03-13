@@ -1,18 +1,41 @@
+// import React from "react";
+// import NavBar from "./NavBar";
+// import Home from "./Home";
+// import About from "./About";
+// import links from "./Links";
+
+// // pass this data down as props to the child component(s) that need it!
+// import user from "../data/user";
+// console.log(user);
+
+// function App({}) {
+//   return (
+//     <div>
+//       <NavBar />
+//       <Home name={user.name} city={user.city} color={user.color} />
+//       <About bio={user.bio} links={user.link} />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
 import React from "react";
 import NavBar from "./NavBar";
 import Home from "./Home";
-import About from "./About";
+import About from "./about"; // Corrected import
 
 // pass this data down as props to the child component(s) that need it!
 import user from "../data/user";
 console.log(user);
 
-function App() {
+function App() { // Remove unnecessary empty object in function parameters
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home name={user.name} city={user.city} color={user.color} />
+      <About bio={user.bio} links={user.links} /> // Corrected prop name
     </div>
   );
 }
